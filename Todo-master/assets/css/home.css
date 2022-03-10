@@ -1,0 +1,215 @@
+#container{
+
+    width: 95vw;
+    margin: 10px;
+    /* border: 1px solid grey; */
+}
+
+#heading{
+
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    color: black;
+    border-bottom: 1px solid grey;
+    letter-spacing: 1px;
+    
+}
+
+#add-form{
+    
+    /* border: 2px solid red; */
+    /* background-color: cadetblue; */
+}
+
+#delete-form{
+
+    /* border: 2px solid blue; */
+}
+
+#description-area{
+
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+}
+
+#description{
+
+    border: none;
+}
+
+
+#details{
+
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid grey;
+    
+}
+
+#category-area{
+
+    width: 50%;
+    border-right: 1px solid grey;
+}
+
+#category-area select {
+    
+    border: none;
+}
+
+#category-area span{
+
+    font-family: sans-serif;
+}
+
+#due-date-area{
+
+    width: 50%;
+}
+
+#due_date{
+    border: none;
+}
+
+#buttons{
+
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid grey;
+
+}
+
+#buttons div{
+    width: 450px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    /* border: 2px solid pink; */
+    
+}
+
+#add{
+    background-color: black;
+    /* border: 2px solid blue; */
+}
+
+#delete{
+    background-color: red;
+    /* border: 2px solid black; */
+    /* margin-top: 15px; */
+}
+
+#card-area{
+
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+#date{
+    color: grey;
+    font-size: 15px;
+}
+
+#orange{
+    background-color: orange;
+}
+
+#purple{
+    background-color: purple;
+}
+
+
+button i{
+    margin-left: -10px;
+    margin-right: 15px;
+    
+}
+.header{
+
+    font-family: sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 2px;
+
+}
+
+.margin-left{
+    margin-left: 10px;
+}
+
+.button-display{
+
+    font-family: sans-serif;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+}
+
+
+
+.card{
+
+    border-bottom: 1px solid grey;
+    height: 80px;
+    font-size: 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.card #info{
+    display: flex;
+    flex-direction: row;
+}
+
+.card .cat-info{
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.card-info span{
+    margin-bottom: 5px;
+}
+
+.card i{
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.checkbox{
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    border: 3px solid black;
+}

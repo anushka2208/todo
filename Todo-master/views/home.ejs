@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+
+    <body>
+        
+        <div id="container">
+            
+            <div id="heading">
+                 TODO App
+            </div>
+
+            <form action="/add-task" id="add-form" method="POST">
+
+                <div id="description-area">
+                    <div class="header margin-left">
+                        Description
+                    </div>
+                    
+                    <textarea class="margin-left" name="description" id="description" cols="30" rows="10" placeholder="What do you need to do?"></textarea>
+                    
+                </div>
+
+                <div id="details">
+
+                    <div id="category-area">
+                        <div class="header margin-left">
+                            category
+                        </div>
+
+                        <!-- <form class="margin-left"> -->
+                            <span class="margin-left" >choose a category</span>
+                            <select class="margin-left" name="category" id="category">
+                                <option value=""></option>
+                                <option value="school">school</option>
+                                <option value="work">work</option>
+                            </select>
+                        <!-- </form> -->
+                    </div>
+
+                    <div id="due-date-area">
+                        <div class="header margin-left">
+                            due date
+                        </div>
+
+                        <!-- <form action="/add-task" method="POST"> -->
+                        <input class="margin-left" id="due_date" name="due_date" type="date">
+                        <!-- </form> -->
+                    </div>
+
+                </div>
+
+
+                
+
+                <div id="buttons">
+
+                    <div>
+
+                        <!-- <form action="/add-task" method="POST"> -->
+                        <!-- <a href="/add-task">     -->
+                        <button id="add" class="button-display" name="add" type="submit">
+                            <i class="fas fa-plus"></i>
+                            Add Task
+                        </button>
+                        <!-- </a> -->
+                        <!-- <input type="text" name="gghgh"> -->
+            </form>
+                        
+                        <form action="/delete-task" id="delete-form" method="POST">
+                            <button id="delete" class="button-display" type="submit">
+                                <i class="fas fa-trash-alt"></i>
+                                Delete Task
+                            </button>
+                        <!-- </form> -->
+
+                        
+
+                    </div>
+
+                </div>
+
+            <!-- </form> -->
+            
+            <div id="card-area">
+
+                <% for(let i=0;i<todo_list.length;i++) {%>    
+                    <% if(todo_list[i].description != "") {%>    
+                        <div class="card">
+
+                            <div id="info">
+
+                                <input type="checkbox" class="checkbox" name="checkbox" value=<%=todo_list[i]._id %>>
+                                <div id="card-info" class="margin-left">
+                                    <span><%= todo_list[i].description%></span>
+
+                                    <% if(todo_list[i].due_date != "") {%>
+                                        <div id="date">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <%= todo_list[i].due_date %>
+                                        </div>
+                                    <% } else {%>
+                                        <div id="date">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            No Due Date
+                                        </div>
+
+                                    <% } %>    
+                                </div>
+
+                            </div>
+
+                            <% if(todo_list[i].category != "") {%>
+
+                                <% if(todo_list[i].category == "school") {%>
+                                    <div class="cat-info" id="orange">
+                                        <%= todo_list[i].category %>
+                                    </div>
+                                <% } else{%>
+                                    <div class="cat-info" id="purple">
+                                        <%= todo_list[i].category %>
+                                    </div>
+                                <% } %>    
+
+                            <% } %>
+                    
+                        </div>
+                    <% } %>    
+                <% } %>
+                
+
+            </div>
+
+            </form>
+
+            
+
+        </div>
+
+
+        <script src="https://kit.fontawesome.com/071baab2d8.js" crossorigin="anonymous"></script>
+
+        <script src="/js/jquery-3.6.0.js"></script>
+
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
